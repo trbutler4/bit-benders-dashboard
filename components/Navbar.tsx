@@ -22,6 +22,7 @@ import { useMagic } from "../contexts/MagicProvider";
 // import { useState } from "react";
 import { FaCopy } from "react-icons/fa";
 import { useState } from "react";
+import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
 
 export const Navbar: React.FC = () => {
   const { loggedIn, loginType, wallet_address } = userStore();
@@ -29,7 +30,11 @@ export const Navbar: React.FC = () => {
   const { pathname } = useRouter();
   const theme = useTheme();
   const { magic } = useMagic();
-  // const { publicKey, disconnect } = useWallet();
+  const {
+    user,
+    isAuthenticated,
+    handleLogOut: handleDynamicLogOut,
+  } = useDynamicContext();
   const [isLogoutInProgress, setLogoutInProgress] = useState(false);
 
   const getTextColor = (route: string) => {
@@ -246,18 +251,18 @@ export const Navbar: React.FC = () => {
                     onClick={async () => {
                       setLogoutInProgress(true);
                       try {
-                        // if (loggedIn && loginType == "WALLET" && publicKey) {
-                        //   // await disconnect();
-                        //   new Promise((resolve) => setTimeout(resolve, 1500));
-                        // }
-                        if (
-                          loggedIn &&
-                          loginType == "EMAIL" &&
-                          (await magic?.user.isLoggedIn()) &&
-                          magic
-                        ) {
-                          await magic?.user.logout();
+                        if (loggedIn && loginType == "WALLET") {
+                          await handleDynamicLogOut();
+                          new Promise((resolve) => setTimeout(resolve, 1500));
                         }
+                        // if (
+                        //   loggedIn &&
+                        //   loginType == "EMAIL" &&
+                        //   (await magic?.user.isLoggedIn()) &&
+                        //   magic
+                        // ) {
+                        //   await magic?.user.logout();
+                        // }
                         userStore.setState({
                           loggedIn: false,
                           loginType: "",
