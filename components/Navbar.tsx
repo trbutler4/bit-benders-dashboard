@@ -269,6 +269,7 @@ export const Navbar: React.FC = () => {
                       } catch (e) {
                         toast.error("Failed to logout");
                       }
+                      router.push("/login");
                       setLogoutInProgress(false);
                     }}
                     _hover={{
