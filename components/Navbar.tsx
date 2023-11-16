@@ -223,7 +223,6 @@ export const Navbar: React.FC = () => {
                           style={{
                             marginLeft: "10px",
                             cursor: "pointer",
-                            color: theme,
                           }}
                           onClick={handleCopyClick}
                         />

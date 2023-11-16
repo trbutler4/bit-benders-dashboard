@@ -18,6 +18,7 @@ import {
   HStack,
   Textarea,
   Select,
+  Image,
 } from "@chakra-ui/react";
 import ChakraReactSelect from "./ChakraReactSelect";
 import { useForm, Controller } from "react-hook-form";
@@ -240,7 +241,7 @@ export function CreateCredentialModal() {
                         alignItems="center"
                         marginRight="1rem"
                       >
-                        <img
+                        <Image
                           src={URL.createObjectURL(selectedProfileImage)}
                           alt="Selected profile image"
                           style={{

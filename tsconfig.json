@@ -15,18 +15,20 @@
     "incremental": true,
     "paths": {
       "@/*": ["./*"],
-      "@magic-ext/oauth": [
-        "./node_modules/@magic-ext/oauth/dist/types/index.d.ts"
+      "@0xpolygonid/js-sdk": [
+        "./node_modules/@0xpolygonid/js-sdk/dist/types/index.d.ts"
       ],
-      "@magic-ext/auth": [
-        "./node_modules/@magic-ext/auth/dist/types/index.d.ts"
-      ]
+      "@iden3/js-jsonld-merklization": [
+        "./node_modules/@iden3/js-jsonld-merklization/dist/types/index.d.ts"
+      ],
+      "@iden3/js-jwz": ["./node_modules/@iden3/js-jwz/dist/types/index.d.ts"]
     },
     "typeRoots": [
       "./types",
       "./node_modules/@types",
-      "./node_modules/@magic-ext/oauth/dist/types",
-      "./node_modules/@magic-ext/auth/dist/types"
+      "./node_modules/@0xpolygonid/js-sdk/dist/types",
+      "./node_modules/@iden3/js-jsonld-merklization/dist/lib/types",
+      "./node_modules/@iden3/js-jwz/dist/types"
     ]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

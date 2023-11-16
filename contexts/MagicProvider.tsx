@@ -7,8 +7,6 @@ import {
   useMemo,
   useState,
 } from "react";
-import { OAuthExtension } from "@magic-ext/oauth";
-import { AuthExtension } from "@magic-ext/auth";
 
 export type Magic = MagicBase;
 

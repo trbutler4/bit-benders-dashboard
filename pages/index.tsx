@@ -1,11 +1,7 @@
-import { useEffect } from "react";
 import Head from "next/head";
-import userStore from "@/stores/userStore";
 import { Box } from "@chakra-ui/react";
 import theme from "@/styles/theme";
 import { useRouter } from "next/router";
-import toast from "react-hot-toast";
-import MyCredentialsPage from "./mycredentials";
 import LoginPage from "./login";
 
 export default function Home() {

@@ -44,7 +44,7 @@ function LoginPage() {
       toast.success("Logged in");
       setLoginInProgress(false);
     }
-  }, [isAuthenticated, loggedIn, user, username]);
+  }, [isAuthenticated, loggedIn, router, user, username]);
 
   return (
     <Flex
