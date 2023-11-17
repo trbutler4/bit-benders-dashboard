@@ -3,7 +3,7 @@ Dashboard for all things Bit Benders
 
 # Polgon ID JS-SDK
 - repo: https://github.com/0xPolygonID/js-sdk
-- documentation: polygonid.github.io/js-sdk-tutorials/docs/intro 
+- docs: https://0xpolygonid.github.io/js-sdk-tutorials/
 - example repository: https://github.com/0xPolygonID/js-sdk-examples
 
 

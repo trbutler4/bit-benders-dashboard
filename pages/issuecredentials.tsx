@@ -6,9 +6,19 @@ import theme from "@/styles/theme";
 import { Box, Image, Text, Grid, Flex, Button, Input } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 
+
+import { createCredential } from "@/polygonid-sdk";
+
 function IssueCredentialsPage() {
   const { loggedIn } = userStore();
   const router = useRouter();
+
+  const handleCreateCredential = async () => {
+    const did = "did:polygonid:polygon:mumbai:2qLnmZsqmkVCXWPeKg3iokTXLETkk7JdxYcqcD24LE"
+    const schema = "https://raw.githubusercontent.com/iden3/claim-schema-vocab/main/schemas/json/KYCAgeCredential-v3.json"
+    const credentialRequest = await createCredential(schema, did);
+    console.log(credentialRequest)
+  }
 
   return (
     <>
@@ -42,6 +52,9 @@ function IssueCredentialsPage() {
                 <CreateCredentialModal />
               </Flex> */}
               <Flex direction="column">
+              <Button onClick={handleCreateCredential}>
+                ISSUE AGE CREDENTIAL
+              </Button>
                 <Text
                   fontSize="1rem"
                   fontWeight="700"

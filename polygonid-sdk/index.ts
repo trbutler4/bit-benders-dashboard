@@ -26,7 +26,28 @@ import {
   
   const rhsUrl = process.env.NEXT_PUBLIC_RHS_URL as string;
   const walletKey = process.env.WALLET_KEY as string;
+
+  export function createCredential(schema: string, did: string) {
+    // 'https://raw.githubusercontent.com/iden3/claim-schema-vocab/main/schemas/json/KYCAgeCredential-v3.json',
+    const credentialRequest: CredentialRequest = {
+      credentialSchema: schema,
+      type: 'KYCAgeCredential',
+      credentialSubject: {
+        id: did,
+        birthday: 19960424,
+        documentType: 99
+      },
+      expiration: 12345678888,
+      revocationOpts: {
+        type: CredentialStatusType.Iden3ReverseSparseMerkleTreeProof,
+        id: rhsUrl
+      }
+    };
+    return credentialRequest;
+  }
   
+/* 
+ /* 
   async function createIdentity(identityWallet: IIdentityWallet) {
     const { did, credential } = await identityWallet.createIdentity({
       method: core.DidMethod.Iden3,
@@ -44,7 +65,7 @@ import {
     };
   }
   
-  function createKYCAgeCredential(did: core.DID) {
+  export function createKYCAgeCredential(did: core.DID) {
     const credentialRequest: CredentialRequest = {
       credentialSchema:
         'https://raw.githubusercontent.com/iden3/claim-schema-vocab/main/schemas/json/KYCAgeCredential-v3.json',
@@ -110,7 +131,7 @@ import {
         return proofReqSig;
     }
   }
-  
+
   async function identityCreation() {
     console.log('=============== key creation ===============');
   
@@ -386,8 +407,9 @@ import {
   
     const authRawRequest = new TextEncoder().encode(JSON.stringify(authRequest));
   
-    // * on the user side */
-  
+    /* on the user side */
+ 
+    /*
     console.log('============== handle auth request ==============');
     const authV2Data = await circuitStorage.loadCircuitData(CircuitId.AuthV2);
     const pm = await initPackageManager(
@@ -460,7 +482,7 @@ import {
     const authRawRequest = new TextEncoder().encode(JSON.stringify(authRequest));
   
     // * on the user side */
-  
+    /*
     console.log('============== handle auth request ==============');
     const authV2Data = await circuitStorage.loadCircuitData(CircuitId.AuthV2);
     const pm = await initPackageManager(
@@ -538,7 +560,7 @@ import {
     const authRawRequest = new TextEncoder().encode(JSON.stringify(authRequest));
   
     // * on the user side */
-  
+    /*
     console.log('============== handle auth request ==============');
     const authV2Data = await circuitStorage.loadCircuitData(CircuitId.AuthV2);
     const pm = await initPackageManager(
@@ -599,9 +621,10 @@ import {
         await handleAuthRequest(true);
     }
   }
-  
+ 
   (async function () {
     const args = process.argv.slice(2);
     await main(args[0]);
   })();
+  */
   
