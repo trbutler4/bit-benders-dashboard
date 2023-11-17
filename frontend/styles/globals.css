@@ -1,0 +1,16 @@
+
+
+
+.dynamic-shadow-dom {
+	--dynamic-connect-button-color: #fff; 
+	--dynamic-connect-button-border: 2px solid #fff;
+	--dynamic-connect-button-shadow: transparent;
+	--dynamic-connect-button-background: transparent;
+	--dynamic-connect-button-border-hover: 2px solid #fff;
+	--dynamic-connect-button-color-hover: #000;
+	--dynamic-connect-button-background-hover: #fff;
+	--dynamic-connect-button-radius: 2px; 
+	--dynamic-text-size-button-primary: 0.75rem; 
+	--dynamic-font-family-primary: 'Montserrat', sans-serif; 
+	--dynamic-font-weight-primary: 800;
+  }

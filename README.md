@@ -46,3 +46,9 @@ Dashboard for all things Bit Benders
     ```bash
     yarn install 
     ```
+
+
+# Issuer Node Setup 
+
+follow docker instructions in issuer-node/README.md
+- onchain issuer 
