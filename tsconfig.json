@@ -24,7 +24,7 @@
       "@iden3/js-jwz": ["./node_modules/@iden3/js-jwz/dist/types/index.d.ts"]
     },
     "typeRoots": [
-      "./types",
+      "src/types",
       "./node_modules/@types",
       "./node_modules/@0xpolygonid/js-sdk/dist/types",
       "./node_modules/@iden3/js-jsonld-merklization/dist/lib/types",
