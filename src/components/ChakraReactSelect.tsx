@@ -1,6 +1,6 @@
 import React from "react";
 import Select, { Props as SelectProps, StylesConfig } from "react-select";
-import theme from "@/styles/theme";
+import theme from "@/src/styles/theme";
 
 type OptionType = {
   value: string;
