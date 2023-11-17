@@ -1,6 +1,10 @@
 ## Bit Benders Dashboard
 Dashboard for all things Bit Benders
 
+# Polgon ID JS-SDK
+documentation can be found at https://devs.polygonid.com/docs/js-sdk/js-sdk-overview/
+and an example repository can be found at https://github.com/0xPolygonID/js-sdk-examples
+
 # Setup
 
 1. Download the zk circuits into `./circuits` by running `dl_circuits.sh`. This will download the latest files from `https://iden3-circuits-bucket.s3.eu-west-1.amazonaws.com/latest.zip`
