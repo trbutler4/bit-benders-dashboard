@@ -1,4 +1,4 @@
-import theme from "@/src/styles/theme";
+import theme from "@/styles/theme";
 import { Box } from "@chakra-ui/react";
 
 export const Footer = () => (

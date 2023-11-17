@@ -1,4 +1,4 @@
-import theme from "@/src/styles/theme";
+import theme from "@/styles/theme";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {

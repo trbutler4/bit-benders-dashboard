@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Box } from "@chakra-ui/react";
-import theme from "@/src/styles/theme";
+import theme from "@/styles/theme";
 import { useRouter } from "next/router";
 import LoginPage from "./login";
 

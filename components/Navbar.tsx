@@ -16,9 +16,9 @@ import {
 // import { useConnection } from "@solana/wallet-adapter-react";
 import { useRouter } from "next/router";
 // import { useEffect } from "react";
-import userStore from "@/src/stores/userStore";
+import userStore from "@/stores/userStore";
 import toast from "react-hot-toast";
-import { useMagic } from "../../contexts/MagicProvider";
+import { useMagic } from "../contexts/MagicProvider";
 // import { useState } from "react";
 import { FaCopy } from "react-icons/fa";
 import { useState } from "react";

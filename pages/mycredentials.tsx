@@ -1,7 +1,7 @@
-import { CreateCredentialModal } from "@/src/components/CreateCredentialModal";
-import { Navbar } from "@/src/components/Navbar";
-import userStore from "@/src/stores/userStore";
-import theme from "@/src/styles/theme";
+import { CreateCredentialModal } from "@/components/CreateCredentialModal";
+import { Navbar } from "@/components/Navbar";
+import userStore from "@/stores/userStore";
+import theme from "@/styles/theme";
 import { Box, Image, Flex, Grid, Input, Text, Button } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 
