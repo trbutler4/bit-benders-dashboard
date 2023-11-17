@@ -2,8 +2,9 @@
 Dashboard for all things Bit Benders
 
 # Polgon ID JS-SDK
-documentation can be found at https://devs.polygonid.com/docs/js-sdk/js-sdk-overview/
-and an example repository can be found at https://github.com/0xPolygonID/js-sdk-examples
+- documentation: polygonid.github.io/js-sdk-tutorials/docs/intro 
+- example repository: https://github.com/0xPolygonID/js-sdk-examples
+
 
 # Setup
 
