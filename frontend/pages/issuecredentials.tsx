@@ -52,9 +52,12 @@ function IssueCredentialsPage() {
                 <CreateCredentialModal />
               </Flex> */}
               <Flex direction="column">
-              <Button onClick={handleCreateCredential}>
-                ISSUE AGE CREDENTIAL
-              </Button>
+                <Button onClick={handleCreateCredential}>
+                  ISSUE AGE CREDENTIAL
+                </Button>
+                <Box justifyContent="center" display="flex" padding={10}>
+                  <Image src="/demo-issuer-qr.png" alt="issuer qr code" w={200} h={200}/>
+                </Box>
                 <Text
                   fontSize="1rem"
                   fontWeight="700"
